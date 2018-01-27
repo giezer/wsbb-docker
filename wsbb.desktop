@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Firefox em um Container
+Exec=docker start wsbb
+Type=Application
