@@ -1,6 +1,10 @@
-# wscef-docker ( fork do farribeiro/wscef-docker )
+**Créditos da ideia vai para farribeiro/wscef-docker**
 
-ubuntu tava dando trabalho, essa imagem usa o CentOS com firefox-esr.
+# wscef-docker
+
+Ubuntu tava dando trabalho com suas atualizações o tempo todo e quebrando a integracao com o warsaw.
+Essa imagem usa  o CentOS com firefox-esr...
+
 Testado com o BB.
 
 **To build:** `docker-compose build wscef`
