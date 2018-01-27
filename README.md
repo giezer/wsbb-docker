@@ -6,7 +6,7 @@ Essa imagem usa  o CentOS com firefox-esr e ta configurado com o warsaw do BB ..
 
 Testado com o BB!
 
-**To build:** `docker-compose build wscef`
+**To build:** `docker-compose build wsbb`
 
-**To run:** `docker start  wscef`
+**To run:** `docker start  wsbb`
 
