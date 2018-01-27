@@ -1,7 +1,6 @@
 # Run Warsaw in a container
 
 # Base docker image
-# Base docker image
 # fork from farribeiro/wscef-docker , mas rodando em CentOS - Os creditos da ideia sao dele.
 
 FROM centos:7
