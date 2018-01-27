@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LANG="pt_BR.UTF-8"
+export LANG="en_US.UTF-8"
 
 if [ -n "${XAUTHORITY}" ] && [ -n "${HOST_HOSTNAME}" ]
 then
@@ -13,14 +13,11 @@ then
     cp /tmp/.docker.xauth ${XAUTHORITY}
   fi
 fi
-
-if [ ! -d ~/.mozilla ]
-then
-  firefox -CreateProfile default \
-  && su -c "apt update && apt -y upgrade && apt -y install /src/GBPCEFwr64.deb"
-else
-  su -c "/etc/init.d/warsaw start"
+if [ ! -d ~/.mozilla ] ; then
+  firefox --no-remote -CreateProfile default
+  sudo rpm -i --nodeps --force /src/warsaw_setup64.rpm &>/dev/null
+  echo Reinicie o container com \"docker start wsbb\"
+  exit 0
 fi
-
-/usr/local/bin/warsaw/core \
-&& firefox -private-window www.caixa.gov.br
+sudo /etc/init.d/warsaw start
+/usr/local/bin/warsaw/core && firefox --no-remote -private-window seg.bb.com.br
