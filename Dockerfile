@@ -16,7 +16,7 @@ RUN yum update -y && yum install -y --nogpgcheck  firefox xauth redhat-lsb-core 
         && chmod 744 /home/ff/startup.sh \
         && chown -R ff:ff /home/ff \
         && echo 'ff ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
-        && echo 'Defaults !requiretty' >> /etc/sudoers
+        && echo 'Defaults !requiretty' >> /etc/sudoers && yum clean all
 
 # Run firefox as non privileged user
 USER ff
