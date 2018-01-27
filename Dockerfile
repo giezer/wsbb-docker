@@ -6,7 +6,14 @@
 FROM centos:7
 LABEL maintainer "jsalatiel"
 
-ADD https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.rpm /src/warsaw_setup64.rpm
+
+# Por algum motivo macabro, o warsar da CEF funciona no BB mas o contrario nao.
+# CEF
+ADD https://cloud.gastecnologia.com.br/cef/warsaw/install/GBPCEFwr64.rpm /src/warsaw.rpm
+# BB
+# ADD https://cloud.gastecnologia.com.br/bb/downloads/ws/warsaw_setup64.rpm /src/warsaw.rpm
+
+
 
 COPY startup.sh /home/ff/
 
