@@ -19,4 +19,4 @@ if [ ! -d ~/.mozilla ] ; then
 else
 	sudo /etc/init.d/warsaw start
 fi
-/usr/local/bin/warsaw/core && firefox --no-remote -private-window seg.bb.com.br
+/usr/local/bin/warsaw/core && firefox --no-remote -private-window https://seg.bb.com.br
