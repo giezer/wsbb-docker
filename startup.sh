@@ -14,10 +14,9 @@ then
   fi
 fi
 if [ ! -d ~/.mozilla ] ; then
-  firefox --no-remote -CreateProfile default
-  sudo rpm -i --nodeps --force /src/warsaw_setup64.rpm &>/dev/null
-  echo Reinicie o container com \"docker start wsbb\"
-  exit 0
+	firefox --no-remote -CreateProfile default
+	sudo rpm -i --nodeps --force /src/warsaw_setup64.rpm &>/dev/null
+else
+	sudo /etc/init.d/warsaw start
 fi
-sudo /etc/init.d/warsaw start
 /usr/local/bin/warsaw/core && firefox --no-remote -private-window seg.bb.com.br
