@@ -16,7 +16,9 @@ fi
 if [ ! -d ~/.mozilla ] ; then
 	firefox --no-remote -CreateProfile default
 	sudo rpm -i --nodeps --force /src/warsaw_setup64.rpm &>/dev/null
+	/usr/local/bin/warsaw/core && firefox --no-remote -private-window https://seg.bb.com.br
 else
 	sudo /etc/init.d/warsaw start
+	/usr/local/bin/warsaw/core && firefox --no-remote -private-window http://www.bb.com.br
 fi
-/usr/local/bin/warsaw/core && firefox --no-remote -private-window https://seg.bb.com.br
+
