@@ -8,5 +8,4 @@ Testado com o BB!
 
 **To build:** `docker-compose build wsbb`
 
-**To run:** `docker start  wsbb`
-
+**To run:** `docker-compose run --name wsbb wsbb `
