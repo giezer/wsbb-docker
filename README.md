@@ -7,8 +7,4 @@ Testado com o BB!
 
 Aparentemente funciona com a CEF também.
 
-
-
-**To build:** `docker-compose build wsbb`
-
-**To run:** `docker-compose run --name wsbb wsbb `
+Execute build_and_run.sh (SEM SER ROOT!)
